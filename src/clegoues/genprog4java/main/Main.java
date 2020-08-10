@@ -61,6 +61,7 @@ public class Main {
 
 	public static void main(String[] args) throws IOException,
 	UnexpectedCoverageResultException {
+		System.setSecurityManager(null);
 		Search searchEngine = null;
 		Representation baseRep = null;
 		Fitness fitnessEngine = null;
