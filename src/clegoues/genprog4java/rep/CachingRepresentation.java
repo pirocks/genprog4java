@@ -314,8 +314,10 @@ Representation<G>  {
 					thisTest.getTestName(), output);
 
 		} catch (ExecuteException exception) {
+			logger.error(exception);
 			posFit.setAllPassed(false);
 		} catch (Exception e) {
+			logger.error(e);
 		} finally {
 			if (out != null)
 				try {
