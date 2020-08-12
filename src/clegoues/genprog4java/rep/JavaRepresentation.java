@@ -475,6 +475,9 @@ CachingRepresentation<JavaEditOperation> {
 			StringWriter compilerErrorWriter = new StringWriter();
 			JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
 
+			for (String option : options) {
+				System.out.println(option);
+			}
 			// Here is where it runs the command to compile the code
 			if (!compiler.getTask(compilerErrorWriter, null, null, options,
 					null, fileObjects).call()) {
