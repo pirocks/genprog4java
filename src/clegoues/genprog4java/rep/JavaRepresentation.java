@@ -475,6 +475,15 @@ CachingRepresentation<JavaEditOperation> {
 			StringWriter compilerErrorWriter = new StringWriter();
 			JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
 
+
+			System.out.println(sourceBuffers.size());
+
+			for (Pair<ClassInfo, String> sourceBuffer : sourceBuffers) {
+				System.out.println(sourceBuffer.getLeft().getClassName());
+				System.out.println(sourceBuffer.getRight());
+
+			}
+
 			for (String option : options) {
 				System.out.println(option);
 			}
