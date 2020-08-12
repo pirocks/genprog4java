@@ -308,6 +308,7 @@ Representation<G>  {
 			out.flush();
 			String output = out.toString();
 			out.reset();
+			System.err.println(output);
 			posFit = CachingRepresentation.parseTestResults(
 					thisTest.getTestName(), output);
 
