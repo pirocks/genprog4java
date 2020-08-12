@@ -304,15 +304,15 @@ Representation<G>  {
 		FitnessValue posFit = new FitnessValue();
 
 		try {
+			System.out.println(command.getExecutable());
+			for (String argument : command.getArguments()) {
+				System.out.println(argument);
+			}
 			executor.execute(command);
 			out.flush();
 			String output = out.toString();
 			out.reset();
 			System.err.println(output);
-			System.out.println(command.getExecutable());
-			for (String argument : command.getArguments()) {
-				System.out.println(argument);
-			}
 			logger.error(out);
 			posFit = CachingRepresentation.parseTestResults(
 					thisTest.getTestName(), output);
